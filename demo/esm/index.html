@@ -7,22 +7,15 @@
     <title>Document</title>
   </head>
   <body>
-    <h1>Demo</h1>
+    <h1>Demo IIFE</h1>
     <div id="app"></div>
     <script type="module">
       import { createApp } from "vue/dist/vue.esm-bundler.js";
-      import SparkUI, {
-        SFCButton,
-        JSXButton,
-        MyButton,
-      } from "../../dist/spark-ui.mjs";
-
+      import SparkUI, { Button } from "../../dist/spark-ui.iife.js";
       createApp({
         template: `
-            <SButton/>
-            <JSXButton/>
-            <SFCButton/>
-            `,
+      <Button/>
+    `,
       })
         .use(SparkUI)
         .mount("#app");

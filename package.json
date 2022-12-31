@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "lint": "eslint --fix --ext .ts,/.vue src",
+    "lint": "eslint --fix --ext .ts,.vue src",
     "format": "prettier --write \"src/**/*.ts\" \"src/**/*.vue\"",
     "docs:dev": "vitepress dev docs",
     "docs:build": "vitepress build docs",
@@ -16,7 +16,7 @@
     "prepare": "husky install"
   },
   "keywords": [],
-  "author": "",
+  "author": "XwenHaHa",
   "license": "ISC",
   "devDependencies": {
     "@iconify-json/ic": "1.1.4",
@@ -37,6 +37,7 @@
     "happy-dom": "6.0.4",
     "husky": "^8.0.2",
     "prettier": "^2.8.1",
+    "terser": "5.4.0",
     "unocss": "0.48.0",
     "vite": "3.0.7",
     "vitepress": "0.22.4",
