@@ -23,8 +23,8 @@ export const config = {
     cssCodeSplit: true,
     lib: {
       entry: "./src/entry.ts",
-      name: "SparkUI",
-      fileName: "spark-ui",
+      name: "SparkeUI",
+      fileName: "sparke-ui",
       // 导出模块格式
       formats: ["esm", "umd", "iife"],
     },

@@ -1,5 +1,5 @@
 import { createApp } from "vue/dist/vue.esm-browser";
-import SparkUI from "./entry";
+import SparkeUI from "./entry";
 
 createApp({
   template: `
@@ -42,5 +42,5 @@ createApp({
     </div>
     `,
 })
-  .use(SparkUI)
+  .use(SparkeUI)
   .mount("#app");
