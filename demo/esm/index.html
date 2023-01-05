@@ -11,12 +11,12 @@
     <div id="app"></div>
     <link rel="stylesheet" href="../../dist/entry.css" />
     <script src="../../node_modules/vue/dist/vue.global.js"></script>
-    <script src="../../dist/spark-ui.iife.js"></script>
+    <script src="../../dist/sparke-ui.iife.js"></script>
     <script>
       console.log("111");
       const { createApp } = Vue;
       console.log("vue", Vue);
-      console.log("SparkUI", SparkUI);
+      console.log("SparkeUI", SparkeUI);
       createApp({
         template: `
         <div style="margin-bottom:20px;">
@@ -55,7 +55,7 @@
         </div>
     `,
       })
-        .use(SparkUI.default)
+        .use(SparkeUI.default)
         .mount("#app");
     </script>
   </body>

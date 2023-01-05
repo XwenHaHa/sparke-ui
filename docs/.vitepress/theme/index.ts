@@ -1,5 +1,5 @@
 import DefaultTheme from "vitepress/theme";
-import SparkUI from "../../../src/entry";
+import SparkeUI from "../../../src/entry";
 
 // 主题样式
 import "vitepress-theme-demoblock/theme/styles/index.css";
@@ -10,7 +10,7 @@ import DemoBlock from "vitepress-theme-demoblock/components/DemoBlock.vue";
 export default {
   ...DefaultTheme,
   enhanceApp({ app }) {
-    app.use(SparkUI);
+    app.use(SparkeUI);
     app.component("Demo", Demo);
     app.component("DemoBlock", DemoBlock);
   },
