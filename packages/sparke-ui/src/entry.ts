@@ -1,5 +1,6 @@
 import { App } from "vue";
 import Button from "./button/Button";
+import "uno.css";
 
 // 导出单独组件
 export { Button };
