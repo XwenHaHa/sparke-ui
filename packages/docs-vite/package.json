@@ -1,15 +1,16 @@
 {
-  "name": "sparke-admin-monorepo",
+  "name": "docs-vite",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "preinstall": "node ./scripts/preinstall.js"
+    "dev": "vite"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "vite": "3.0.7"
+    "sparke-ui": "workspace:^0.1.0",
+    "vue": "3.2.37"
   }
 }
