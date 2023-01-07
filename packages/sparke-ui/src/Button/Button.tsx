@@ -11,7 +11,7 @@ export type IColor =
   | "blue"
   | "indigo"
   | "purple"
-  | "pink"
+  | "pink";
 export type ISize = "small" | "medium" | "large";
 
 export const props = {
