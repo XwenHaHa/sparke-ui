@@ -4,8 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "preinstall": "node ./scripts/preinstall.js",
-    "prepare": "npx husky install"
+    "preinstall": "node ./scripts/preinstall.js"
   },
   "keywords": [],
   "author": "",
