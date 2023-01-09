@@ -1,50 +1,39 @@
-// 读取 vite 配置
+// 读取vite配置
+import fs from "fs-extra";
+import path from "path";
 import { config } from "../vite.config";
-import {
-  build,
-  InlineConfig,
-  defineConfig,
-  UserConfig,
-  BuildOptions,
-} from "vite";
-import * as fs from "fs-extra";
-import * as path from "path";
+import { build, InlineConfig, defineConfig, UserConfig } from "vite";
 
 const buildAll = async () => {
-  // 全量打包
-  build(defineConfig(config as UserConfig) as InlineConfig);
+  // 1.导入vite.config中的配置，使用vite的build方法进行全量打包
+  await build(defineConfig(config as UserConfig) as InlineConfig);
 
-  // 读取组件文件夹遍历组件库文件夹
-  const srcDir = path.resolve(__dirname, "../src/");
+  // 2.读取文件夹，遍历组件库文件夹
+  const srcDir = path.resolve(__dirname, "../src");
+
+  const outDistDir = config.build!.outDir;
   fs.readdirSync(srcDir)
     .filter((name) => {
-      // 过滤文件只保留包含index.ts
+      // 过滤出文件夹中包含index.ts的文件夹
       const componentDir = path.resolve(srcDir, name);
       const isDir = fs.lstatSync(componentDir).isDirectory();
       return isDir && fs.readdirSync(componentDir).includes("index.ts");
     })
+    // 3.为每个模块定制不同的编译规则
     .forEach(async (name) => {
-      console.log("name", name);
-
-      // 文件夹遍历
-      // 导出文件夹为 dist/<组件名>/ 例： dist/Button；
-      // 导出模块名为： index.esm.js、index.umd.js；
-      // 导出模块名为： <组件名> iffe 中绑定到全局的名字。
-      const outDir = path.resolve(config?.build?.outDir as string, name);
+      // name:每个文件夹的名称
+      const outDir = path.resolve(outDistDir!, name);
       const custom = {
         lib: {
-          entry: path.resolve(srcDir, name),
-          name, // 导出模块名
-          fileName: `index`,
-          formats: [`esm`, `umd`],
+          entry: path.join(srcDir, name),
+          name,
+          fileName: "index",
+          format: ["esm", "umd"],
         },
         outDir,
       };
-
-      Object.assign(config?.build as BuildOptions, custom);
+      Object.assign(config.build!, custom);
       await build(defineConfig(config as UserConfig) as InlineConfig);
-
-      // 为每个子组件包定制一个自己的 package.json
       fs.outputFile(
         path.resolve(outDir, `package.json`),
         `{
@@ -56,5 +45,4 @@ const buildAll = async () => {
       );
     });
 };
-
 buildAll();
