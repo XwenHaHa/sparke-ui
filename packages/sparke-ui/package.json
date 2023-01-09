@@ -17,7 +17,10 @@
     "test": "vitest",
     "test:run": "vitest run"
   },
-  "keywords": [],
+  "keywords": [
+    "components",
+    "ui"
+  ],
   "author": "XwenHaHa",
   "license": "ISC",
   "devDependencies": {
@@ -41,18 +44,19 @@
     "happy-dom": "6.0.4",
     "husky": "^8.0.2",
     "prettier": "^2.8.1",
+    "sass": "^1.54.8",
     "terser": "5.4.0",
-    "unocss": "0.45.6",
-    "vite": "3.0.7",
-    "vitepress": "0.22.4",
-    "vitepress-theme-demoblock": "1.4.2",
-    "vitest": "0.21.1"
+    "unocss": "^0.45.7",
+    "vite": "^3.0.7",
+    "vitepress": "1.0.0-alpha.10",
+    "vitepress-theme-demoblock": "^1.4.2",
+    "vitest": "^0.22.0"
   },
   "dependencies": {
     "@commitlint/cli": "17.0.2",
     "@commitlint/config-conventional": "17.0.2",
     "@testing-library/vue": "^6.6.1",
     "typescript": "^4.7.4",
-    "vue": "3.2.37"
+    "vue": "^3.2.37"
   }
 }
