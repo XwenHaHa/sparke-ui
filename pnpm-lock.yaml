@@ -46,9 +46,9 @@ importers:
       typescript: ^4.7.4
       unocss: ^0.45.7
       vite: ^3.0.7
-      vitepress: 1.0.0-alpha.10
+      vitepress: 1.0.0-alpha.8
       vitepress-theme-demoblock: ^1.4.2
-      vitest: ^0.22.0
+      vitest: ^0.22.1
       vue: ^3.2.37
     dependencies:
       '@commitlint/cli': registry.npmmirror.com/@commitlint/cli/17.0.2_@types+node@18.11.18
@@ -81,7 +81,7 @@ importers:
       terser: registry.npmmirror.com/terser/5.4.0
       unocss: 0.45.30_vite@3.2.5
       vite: 3.2.5_wcupfwvugn6hegx7lkoqxhd4ga
-      vitepress: 1.0.0-alpha.10_wcupfwvugn6hegx7lkoqxhd4ga
+      vitepress: 1.0.0-alpha.8_wcupfwvugn6hegx7lkoqxhd4ga
       vitepress-theme-demoblock: 1.4.2_sass@1.57.1
       vitest: 0.22.1_cu7d724wqo6r3jdtficpqmur6e
 
@@ -2424,8 +2424,8 @@ packages:
       - supports-color
     dev: true
 
-  /vitepress/1.0.0-alpha.10_wcupfwvugn6hegx7lkoqxhd4ga:
-    resolution: {integrity: sha512-RGPU+YApj2jaYplAIJUe+2qlDks9FzPX1QGK+7NdGByeCCVZg6z9eYWjjvfvA/sgCtG3yeJE/4/jCwlv4Y8bVw==}
+  /vitepress/1.0.0-alpha.8_wcupfwvugn6hegx7lkoqxhd4ga:
+    resolution: {integrity: sha512-kTRN5DCagvMqr9OjylSV9/waGg0IHrxL0hBVuJoz7ykleZq2qR02n5CaiFq5QrSB/VRBGqiVsFQzet9vJsXS8g==}
     hasBin: true
     dependencies:
       '@docsearch/css': 3.3.1
