@@ -40,8 +40,8 @@ export default defineConfig({
       { text: "指南", items: guideSidebar },
       {
         text: "组件",
-        link: "/components/Button/index",
-        activeMatch: "/components/Button/",
+        link: "/components/button/index",
+        activeMatch: "/components/button/",
       },
     ],
 
