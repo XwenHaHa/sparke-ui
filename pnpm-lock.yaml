@@ -85,9 +85,6 @@ importers:
       vitepress-theme-demoblock: 1.4.2_sass@1.57.1
       vitest: 0.22.1_cu7d724wqo6r3jdtficpqmur6e
 
-  packages/sparke-ui/dist/Button:
-    specifiers: {}
-
 packages:
 
   /@algolia/autocomplete-core/1.7.2:
