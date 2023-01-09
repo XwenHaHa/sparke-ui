@@ -1,28 +1,58 @@
-const sidebar = {
-  "/": [
-    { text: "快速开始", link: "/" },
-    {
-      text: "通用",
-      children: [{ text: "Button 按钮", link: "/components/button/" }],
-    },
-    { text: "导航" },
-    { text: "反馈" },
-    { text: "数据录入" },
-    { text: "数据展示" },
-    { text: "布局" },
-  ],
-};
-const config = {
+import { defineConfig } from "vitepress";
+import { demoBlockPlugin } from "vitepress-theme-demoblock";
+
+const guideSidebar = [
+  {
+    text: "基础",
+    items: [
+      {
+        text: "快速开始",
+        link: "/guide/",
+      },
+    ],
+  },
+];
+
+const sidebar = [
+  {
+    text: "基础",
+    items: [{ text: "快速开始", link: "/guide/" }],
+  },
+  {
+    text: "组件",
+    items: [{ text: "Button组件", link: "/components/button/" }],
+  },
+];
+
+export default defineConfig({
+  title: "Sparke-UI", //标题
   themeConfig: {
+    logo: "/fire.png",
+    siteTitle: "Sparke-UI",
+
+    // 社交链接
+    socialLinks: [
+      { icon: "github", link: "https://github.com/XwenHaHa/sparke-ui" },
+    ],
+
+    // 导航栏
+    nav: [
+      { text: "指南", items: guideSidebar },
+      {
+        text: "组件",
+        link: "/components/button/index",
+        activeMatch: "/components/button/",
+      },
+    ],
+
     sidebar,
   },
 
-  markdown:{
-    config:(md) => {
-        // 添加DemoBlock插槽
-        const {demoBlockPlugin} = require('vitepress-theme-demoblock')
-        md.use(demoBlockPlugin)
-    }
-  }
-};
-export default config;
+  markdown: {
+    config: (md) => {
+      md.use(demoBlockPlugin, {
+        cssPreprocessor: "sass",
+      });
+    },
+  },
+});
