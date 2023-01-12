@@ -24,7 +24,6 @@
 - ⚡️基于Vite + Vue3 + TypeScript 进行开发
 - 💪采用Monorepo进行管理 (pnpm workspace)
 - 🌟同时支持JSX与Vue单文件组件
-- 👌通过Jest + Vue3 plugins实现单元测试
 - 🔍使用Eslint + Prettier + Husky 进行语法检查
 - 🔨Vitepress + Vercel 进行文档网站搭建
 - 🤝基于Action CI 实现持续集成与交付
