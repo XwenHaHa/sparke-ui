@@ -30,7 +30,7 @@
 - 🤝基于Action CI 实现持续集成与交付
 
 ## 快速开始
-希望尽快上手 Sparke-UI，可以浏览 [Getting Started](https://smarty-admin.vercel.app/).
+希望尽快上手 Sparke-UI，可以浏览 [Getting Started](https://sparke-ui.vercel.app/).
 
 ## 开源协议
 [MIT](./LICENSE)
