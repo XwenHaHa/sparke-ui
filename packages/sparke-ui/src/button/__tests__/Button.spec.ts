@@ -27,11 +27,6 @@ describe("color", () => {
       },
     });
     console.log("类名", wrapper.classes());
-    expect(
-      wrapper
-        .classes()
-        .map((v) => v.replace("\n", ""))
-        .includes("bg-white-500")
-    ).toBe(true);
+    expect(wrapper.classes().map((v) => v.replace("\n", ""))).toBe(true);
   });
 });
