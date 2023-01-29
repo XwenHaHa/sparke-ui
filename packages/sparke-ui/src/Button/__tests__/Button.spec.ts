@@ -26,7 +26,11 @@ describe("color", () => {
         default: "Button",
       },
     });
-    console.log("类名", wrapper.classes());
-    expect(wrapper.classes().map((v) => v.replace("\n", ""))).toBe(true);
+    expect(
+      wrapper
+        .classes()
+        .map((v) => v.replace("\n", ""))
+        .includes("bg-white")
+    ).toBe(true);
   });
 });
