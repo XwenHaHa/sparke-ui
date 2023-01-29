@@ -4,7 +4,7 @@
 
 ## 基础用法
 
-使用`size`、`color`、`pain`、`round`属性来定义 Button 的样式。
+使用`size`、`color`、`plain`、`round`属性来定义 Button 的样式。
 
 :::demo
 
@@ -19,20 +19,20 @@
     <SButton color="red">红色按钮</SButton>
   </div>
   <div style="margin-bottom:20px;">
-    <SButton plain>默认按钮</SButton>
-    <SButton color="blue" plain>朴素按钮</SButton>
+    <SButton plain>朴素按钮</SButton>
+    <SButton color="blue" plain>主要按钮</SButton>
     <SButton color="green" plain>绿色按钮</SButton>
     <SButton color="gray" plain>灰色按钮</SButton>
     <SButton color="yellow" plain>黄色按钮</SButton>
     <SButton color="red" plain>红色按钮</SButton>
   </div>
   <div style="margin-bottom:20px;">
-    <SButton color="blue" size="small" plain>小按钮</SButton>
-    <SButton color="blue" size="medium" plain>中按钮</SButton>
-    <SButton color="blue" size="large" plain>大按钮</SButton>
+    <SButton size="small">小按钮</SButton>
+    <SButton size="medium">中按钮</SButton>
+    <SButton size="large">大按钮</SButton>
   </div>
   <div style="margin-bottom:20px;">
-    <SButton round plain>默认按钮</SButton>
+    <SButton round>默认按钮</SButton>
     <SButton color="blue" round plain icon="search">搜索按钮</SButton>
     <SButton color="green" round plain icon="edit">编辑按钮</SButton>
     <SButton color="gray" round plain icon="check">成功按钮</SButton>
@@ -40,11 +40,12 @@
     <SButton color="red" round plain icon="delete">删除按钮</SButton>
   </div>
   <div style="margin-bottom:20px;">
-    <SButton round plain icon="search"></SButton>
-    <SButton color="blue" round plain icon="edit"></SButton>
-    <SButton color="green" round plain icon="check"></SButton>
-    <SButton color="gray" round plain icon="message"></SButton>
-    <SButton color="yellow" round plain icon="delete"></SButton>
+    <SButton round icon="search"></SButton>
+    <SButton color="blue" round icon="edit"></SButton>
+    <SButton color="green" round icon="check"></SButton>
+    <SButton color="gray" round icon="message"></SButton>
+    <SButton color="yellow" round icon="star"></SButton>
+    <SButton color="red" round icon="delete"></SButton>
   </div>
 </template>
 ```
@@ -60,11 +61,11 @@
 ```vue
 <template>
   <div class="flex flex-row">
-    <SButton color="blue" plain icon="edit"></SButton>
-    <SButton color="blue" plain icon="share"></SButton>
-    <SButton color="blue" plain icon="delete"></SButton>
-    <SButton color="blue" plain icon="search">搜索按钮</SButton>
-    <SButton color="blue" plain icon="upload">上传按钮</SButton>
+    <SButton color="blue" icon="edit"></SButton>
+    <SButton color="blue" icon="share"></SButton>
+    <SButton color="blue" icon="delete"></SButton>
+    <SButton color="blue" icon="search">搜索按钮</SButton>
+    <SButton color="blue" icon="upload">上传按钮</SButton>
   </div>
 </template>
 ```

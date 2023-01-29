@@ -10,12 +10,12 @@ hero:
     alt: VitePress
   actions:
     - theme: brand
-      text: Get Started
+      text: 开始体验
       link: /guide/
     - theme: alt
-      text: View on GitHub
+      text: 在GitHub上查看
       link: https://github.com/XwenHaHa/sparke-ui
-  
+
 features:
   - icon: ⚡️
     title: 支持Vite
