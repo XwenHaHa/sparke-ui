@@ -3,10 +3,10 @@ import { demoBlockPlugin } from "vitepress-theme-demoblock";
 
 const guideSidebar = [
   {
-    text: "基础",
+    text: "介绍",
     items: [
       {
-        text: "快速开始",
+        text: "Sparke UI是什么",
         link: "/guide/",
       },
     ],
@@ -15,8 +15,8 @@ const guideSidebar = [
 
 const sidebar = [
   {
-    text: "基础",
-    items: [{ text: "快速开始", link: "/guide/" }],
+    text: "介绍",
+    items: [{ text: "Sparke UI是什么", link: "/guide/" }],
   },
   {
     text: "组件",
@@ -32,8 +32,13 @@ export default defineConfig({
 
     // 社交链接
     socialLinks: [
-      { icon: "github", link: "https://github.com/XwenHaHa/sparke-ui" },
+      { icon: "github", link: "https://github.com/XwenHaHa" },
     ],
+
+    footer: {
+      message: `MIT License`,
+      copyright: `Copyright (c) 2023-present Wen(Xwen)HaiJing`
+    },
 
     // 导航栏
     nav: [

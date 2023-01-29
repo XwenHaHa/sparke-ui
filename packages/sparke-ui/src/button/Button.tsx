@@ -23,10 +23,7 @@ export const props = {
   },
 
   // 朴素属性
-  plain: {
-    type: Boolean,
-    default: false,
-  },
+  plain: Boolean,
 
   // 大小属性
   size: {
@@ -35,10 +32,7 @@ export const props = {
   },
 
   // 圆弧属性
-  round: {
-    type: Boolean,
-    default: false,
-  },
+  round: Boolean,
 
   // 图标属性
   icon: {
@@ -70,23 +64,43 @@ export default defineComponent({
     };
     return () => (
       <button
-        class={` 
-      py-${size[props.size].y} 
-      px-${size[props.size].x} 
-      ${props.round ? "rounded-full" : "rounded-sm"} 
-      bg-${props.color}-${props.plain ? "100" : "500"} 
-      hover:bg-${props.color}-${props.plain ? "500" : "400"} 
-      border-${props.color}-${props.plain ? "200" : "500"} 
-      cursor-pointer 
-      border-solid 
-      border 
-      text-${props.plain ? props.color + "-500" : "white"} 
-      text-${size[props.size].text} 
-      hover:text-white 
-      hover:border-transparent
-      transition duration-300 ease-in-out 
-      m-2 
-      `}
+        class={
+          props.color !== "white"
+            ? ` 
+            py-${size[props.size].y} 
+            px-${size[props.size].x} 
+            ${props.round ? "rounded-full" : "rounded-sm"} 
+            bg-${props.color}-${props.plain ? "100" : "500"} 
+            hover:bg-${props.color}-${props.plain ? "500" : "400"} 
+            border-${props.color}-${props.plain ? "200" : "500"} 
+            cursor-pointer 
+            border-solid 
+            border 
+            text-${props.plain ? props.color + "-500" : "white"} 
+            text-${size[props.size].text} 
+            hover:text-white 
+            hover:border-transparent
+            transition duration-300 ease-in-out 
+            m-2 
+            `
+            : `
+            py-${size[props.size].y} 
+            px-${size[props.size].x} 
+            ${props.round ? "rounded-full" : "rounded-sm"} 
+            bg-white 
+            hover:bg-blue-${props.plain ? "0" : "100"}
+            border-gray
+            cursor-pointer 
+            border-solid 
+            border 
+            text-gray-600
+            text-${size[props.size].text} 
+            hover:text-blue 
+            hover:border-blue-${props.plain ? "500" : "200"}
+            transition duration-300 ease-in-out 
+            m-2 
+            `
+        }
       >
         {props.icon !== "" ? (
           <i class={`i-ic-baseline-${props.icon} p-2`}></i>
